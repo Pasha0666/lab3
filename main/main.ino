@@ -1,10 +1,9 @@
   
 #include "MyServo.h"
-#define PIN_SERVO 10
 
-const int echoPin = 8;
-const int trigPin = 9;
-//MyServo myServo(PIN_SERVO);
+#define PIN_SERVO 10
+#define ECHO_PIN 8
+#define TRIG_PIN 9
 Servo servo;
 
 int angle;
@@ -14,9 +13,9 @@ void setup()
 {
   angle = 0;
   servo.attach(PIN_SERVO);
-  pinMode(echoPin, INPUT);
-  pinMode(trigPin, OUTPUT);
-  digitalWrite(trigPin, LOW);
+  pinMode(ECHO_PIN, INPUT);
+  pinMode(TRIG_PIN, OUTPUT);
+  digitalWrite(TRIG_PIN, LOW);
   Serial.begin(115200);
 }
 
